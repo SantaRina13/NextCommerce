@@ -1,41 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-04T02:38:23.247871" rpa="false" schemaversion="5">
-<suite id="s1" name="E2E" source="/Users/abbon/Documents/Cypress/TestCases/E2E.robot">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-05T02:12:55.966871" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E" source="/Users/abbon/NextCommerce/TestCases/E2E.robot">
 <test id="s1-t1" name="Successfully buy" line="6">
 <kw name="Open Home Page" owner="HomePage">
-<kw name="HomePage.Open Page">
-<msg time="2025-08-04T02:38:23.333092" level="FAIL">No keyword with name 'HomePage.Open Page' found. Did you mean:
-    HomePage.Open Home Page</msg>
-<status status="FAIL" start="2025-08-04T02:38:23.333071" elapsed="0.000046">No keyword with name 'HomePage.Open Page' found. Did you mean:
-    HomePage.Open Home Page</status>
+<kw name="Open Page" owner="HomePage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:12:56.058045" level="INFO">Opening browser 'chrome' to base url 'https://aptest.29next.store/'.</msg>
+<arg>${HomePage.url}</arg>
+<arg>${HomePage.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-05T02:12:56.057940" elapsed="2.380643"/>
 </kw>
-<status status="FAIL" start="2025-08-04T02:38:23.332286" elapsed="0.000902">No keyword with name 'HomePage.Open Page' found. Did you mean:
-    HomePage.Open Home Page</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-05T02:13:01.442643" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-05T02:12:58.439272" elapsed="3.003903"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:12:56.057664" elapsed="5.386089"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:12:56.057516" elapsed="5.386477"/>
 </kw>
 <kw name="Verify Home Page Detail" owner="HomePage">
-<status status="NOT RUN" start="2025-08-04T02:38:23.333295" elapsed="0.000018"/>
+<kw name="Verify Home Page" owner="HomePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.lblHeader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.446099" elapsed="0.027866"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:13:01.487076" level="INFO">Element 'xpath:/html/body/div/div/div/div/div' contains text 'Welcome to our store'.</msg>
+<arg>${HomePage.lblHeader}</arg>
+<arg>${HomePage['lblHeader']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.474163" elapsed="0.012980"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.icnHome}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.487257" elapsed="0.009117"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.lblHome}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.496498" elapsed="0.008406"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:13:01.511739" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[1]/a' contains text 'Home'.</msg>
+<arg>${HomePage.lblHome}</arg>
+<arg>${HomePage['lblHome']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.504987" elapsed="0.006788"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.lblShop}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.511843" elapsed="0.007316"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:13:01.525268" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[2]/a' contains text 'Shop'.</msg>
+<arg>${HomePage.lblShop}</arg>
+<arg>${HomePage['lblShop']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.519226" elapsed="0.006072"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.lblSupport}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.525359" elapsed="0.006756"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:13:01.537948" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[3]/a' contains text 'Support'.</msg>
+<arg>${HomePage.lblSupport}</arg>
+<arg>${HomePage['lblSupport']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.532180" elapsed="0.005796"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.icnMagnify}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.538033" elapsed="0.006624"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.icnProfile}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.544718" elapsed="0.006639"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.icnBasket}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.551412" elapsed="0.006472"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.lblDescriptionTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.557938" elapsed="0.006439"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:13:01.570166" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/h1' contains text 'Store Value Proposition'.</msg>
+<arg>${HomePage.lblDescriptionTitle}</arg>
+<arg>${HomePage['lblDescriptionTitle']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.564431" elapsed="0.005760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.lblDescriptionDetail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.570243" elapsed="0.006497"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:13:01.582478" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/p' contains text 'Describe a product, make announcements, or welcome customers to your store.'.</msg>
+<arg>${HomePage.lblDescriptionDetail}</arg>
+<arg>${HomePage['lblDescriptionDetail']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.576792" elapsed="0.005711"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePage.lblShopAll}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.582554" elapsed="0.006927"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:13:01.595407" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a' contains text 'Shop All'.</msg>
+<arg>${HomePage.lblShopAll}</arg>
+<arg>${HomePage['lblShopAll']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.589539" elapsed="0.005895"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:13:01.445742" elapsed="0.149728"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:13:01.444932" elapsed="0.150560"/>
 </kw>
 <kw name="Click Shop All Button" owner="HomePage">
-<status status="NOT RUN" start="2025-08-04T02:38:23.333386" elapsed="0.000016"/>
+<kw name="Click Shop All" owner="HomePage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:13:01.595888" level="INFO">Clicking element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a'.</msg>
+<arg>${HomePage.lblShopAll}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-05T02:13:01.595812" elapsed="4.950168"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:13:01.595738" elapsed="4.950335"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:13:01.595609" elapsed="4.950499"/>
 </kw>
 <tag>1</tag>
-<status status="FAIL" start="2025-08-04T02:38:23.331979" elapsed="0.001511">No keyword with name 'HomePage.Open Page' found. Did you mean:
-    HomePage.Open Home Page</status>
+<status status="PASS" start="2025-08-05T02:12:56.057227" elapsed="10.489049"/>
 </test>
-<status status="FAIL" start="2025-08-04T02:38:23.248517" elapsed="0.085153"/>
+<status status="PASS" start="2025-08-05T02:12:55.967648" elapsed="10.578967"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">1</stat>
+<stat pass="1" fail="0" skip="0">1</stat>
 </tag>
 <suite>
-<stat name="E2E" id="s1" pass="0" fail="1" skip="0">E2E</stat>
+<stat name="E2E" id="s1" pass="1" fail="0" skip="0">E2E</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-08-04T02:38:23.331707" level="ERROR">Error in file '/Users/abbon/Documents/Cypress/Robot/Features/HomePage.robot' on line 2: Resource file '/Users/abbon/Documents/Cypress/Robot/Robot/Pages/HomePage.robot' does not exist.</msg>
 </errors>
 </robot>

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ${CURDIR}/../Robot/Pages/HomePage.robot
+Resource    ${CURDIR}/../Pages/HomePage.robot
 
 *** Keywords ***
 Open Home Page
