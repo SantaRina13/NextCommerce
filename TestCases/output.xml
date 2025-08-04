@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-04T02:38:23.247871" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E" source="/Users/abbon/Documents/Cypress/TestCases/E2E.robot">
+<test id="s1-t1" name="Successfully buy" line="6">
+<kw name="Open Home Page" owner="HomePage">
+<kw name="HomePage.Open Page">
+<msg time="2025-08-04T02:38:23.333092" level="FAIL">No keyword with name 'HomePage.Open Page' found. Did you mean:
+    HomePage.Open Home Page</msg>
+<status status="FAIL" start="2025-08-04T02:38:23.333071" elapsed="0.000046">No keyword with name 'HomePage.Open Page' found. Did you mean:
+    HomePage.Open Home Page</status>
+</kw>
+<status status="FAIL" start="2025-08-04T02:38:23.332286" elapsed="0.000902">No keyword with name 'HomePage.Open Page' found. Did you mean:
+    HomePage.Open Home Page</status>
+</kw>
+<kw name="Verify Home Page Detail" owner="HomePage">
+<status status="NOT RUN" start="2025-08-04T02:38:23.333295" elapsed="0.000018"/>
+</kw>
+<kw name="Click Shop All Button" owner="HomePage">
+<status status="NOT RUN" start="2025-08-04T02:38:23.333386" elapsed="0.000016"/>
+</kw>
+<tag>1</tag>
+<status status="FAIL" start="2025-08-04T02:38:23.331979" elapsed="0.001511">No keyword with name 'HomePage.Open Page' found. Did you mean:
+    HomePage.Open Home Page</status>
+</test>
+<status status="FAIL" start="2025-08-04T02:38:23.248517" elapsed="0.085153"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">1</stat>
+</tag>
+<suite>
+<stat name="E2E" id="s1" pass="0" fail="1" skip="0">E2E</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-08-04T02:38:23.331707" level="ERROR">Error in file '/Users/abbon/Documents/Cypress/Robot/Features/HomePage.robot' on line 2: Resource file '/Users/abbon/Documents/Cypress/Robot/Robot/Pages/HomePage.robot' does not exist.</msg>
+</errors>
+</robot>
