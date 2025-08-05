@@ -6,3 +6,8 @@ HomePage:
   lblDescriptionTitle:              Store Value Proposition
   lblDescriptionDetail:             Describe a product, make announcements, or welcome customers to your store.
   lblShopAll:                       Shop All
+ShopPage:
+  lblProductTitle:                  Gift Card         
+  lblProductDetail:                 Gift Card      
+  lblDenomination:                  Denomination                                            
+  lblAddToCart:                     Add to cart

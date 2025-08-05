@@ -1,152 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-05T02:12:55.966871" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-05T02:55:17.277756" rpa="false" schemaversion="5">
 <suite id="s1" name="E2E" source="/Users/abbon/NextCommerce/TestCases/E2E.robot">
-<test id="s1-t1" name="Successfully buy" line="6">
+<test id="s1-t1" name="Successfully buy" line="7">
 <kw name="Open Home Page" owner="HomePage">
 <kw name="Open Page" owner="HomePage">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:12:56.058045" level="INFO">Opening browser 'chrome' to base url 'https://aptest.29next.store/'.</msg>
+<msg time="2025-08-05T02:55:17.365844" level="INFO">Opening browser 'chrome' to base url 'https://aptest.29next.store/'.</msg>
 <arg>${HomePage.url}</arg>
 <arg>${HomePage.browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-05T02:12:56.057940" elapsed="2.380643"/>
+<status status="PASS" start="2025-08-05T02:55:17.365709" elapsed="1.416222"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-05T02:13:01.442643" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-08-05T02:55:21.790155" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-05T02:12:58.439272" elapsed="3.003903"/>
+<status status="PASS" start="2025-08-05T02:55:18.788796" elapsed="3.001946"/>
 </kw>
-<status status="PASS" start="2025-08-05T02:12:56.057664" elapsed="5.386089"/>
+<status status="PASS" start="2025-08-05T02:55:17.365371" elapsed="4.425741"/>
 </kw>
-<status status="PASS" start="2025-08-05T02:12:56.057516" elapsed="5.386477"/>
+<status status="PASS" start="2025-08-05T02:55:17.365216" elapsed="4.426028"/>
 </kw>
 <kw name="Verify Home Page Detail" owner="HomePage">
 <kw name="Verify Home Page" owner="HomePage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblHeader}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.446099" elapsed="0.027866"/>
+<status status="PASS" start="2025-08-05T02:55:21.794048" elapsed="0.022056"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:13:01.487076" level="INFO">Element 'xpath:/html/body/div/div/div/div/div' contains text 'Welcome to our store'.</msg>
+<msg time="2025-08-05T02:55:21.828244" level="INFO">Element 'xpath:/html/body/div/div/div/div/div' contains text 'Welcome to our store'.</msg>
 <arg>${HomePage.lblHeader}</arg>
 <arg>${HomePage['lblHeader']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.474163" elapsed="0.012980"/>
+<status status="PASS" start="2025-08-05T02:55:21.816288" elapsed="0.012008"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.icnHome}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.487257" elapsed="0.009117"/>
+<status status="PASS" start="2025-08-05T02:55:21.828400" elapsed="0.008477"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblHome}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.496498" elapsed="0.008406"/>
+<status status="PASS" start="2025-08-05T02:55:21.836967" elapsed="0.007876"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:13:01.511739" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[1]/a' contains text 'Home'.</msg>
+<msg time="2025-08-05T02:55:21.851443" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[1]/a' contains text 'Home'.</msg>
 <arg>${HomePage.lblHome}</arg>
 <arg>${HomePage['lblHome']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.504987" elapsed="0.006788"/>
+<status status="PASS" start="2025-08-05T02:55:21.844921" elapsed="0.006555"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblShop}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.511843" elapsed="0.007316"/>
+<status status="PASS" start="2025-08-05T02:55:21.851547" elapsed="0.007209"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:13:01.525268" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[2]/a' contains text 'Shop'.</msg>
+<msg time="2025-08-05T02:55:21.864817" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[2]/a' contains text 'Shop'.</msg>
 <arg>${HomePage.lblShop}</arg>
 <arg>${HomePage['lblShop']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.519226" elapsed="0.006072"/>
+<status status="PASS" start="2025-08-05T02:55:21.858825" elapsed="0.006022"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblSupport}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.525359" elapsed="0.006756"/>
+<status status="PASS" start="2025-08-05T02:55:21.864909" elapsed="0.006737"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:13:01.537948" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[3]/a' contains text 'Support'.</msg>
+<msg time="2025-08-05T02:55:21.877254" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[3]/a' contains text 'Support'.</msg>
 <arg>${HomePage.lblSupport}</arg>
 <arg>${HomePage['lblSupport']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.532180" elapsed="0.005796"/>
+<status status="PASS" start="2025-08-05T02:55:21.871709" elapsed="0.005573"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.icnMagnify}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.538033" elapsed="0.006624"/>
+<status status="PASS" start="2025-08-05T02:55:21.877339" elapsed="0.006596"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.icnProfile}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.544718" elapsed="0.006639"/>
+<status status="PASS" start="2025-08-05T02:55:21.883992" elapsed="0.006459"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.icnBasket}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.551412" elapsed="0.006472"/>
+<status status="PASS" start="2025-08-05T02:55:21.890506" elapsed="0.006489"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblDescriptionTitle}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.557938" elapsed="0.006439"/>
+<status status="PASS" start="2025-08-05T02:55:21.897049" elapsed="0.006463"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:13:01.570166" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/h1' contains text 'Store Value Proposition'.</msg>
+<msg time="2025-08-05T02:55:21.909363" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/h1' contains text 'Store Value Proposition'.</msg>
 <arg>${HomePage.lblDescriptionTitle}</arg>
 <arg>${HomePage['lblDescriptionTitle']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.564431" elapsed="0.005760"/>
+<status status="PASS" start="2025-08-05T02:55:21.903566" elapsed="0.005823"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblDescriptionDetail}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.570243" elapsed="0.006497"/>
+<status status="PASS" start="2025-08-05T02:55:21.909441" elapsed="0.006431"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:13:01.582478" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/p' contains text 'Describe a product, make announcements, or welcome customers to your store.'.</msg>
+<msg time="2025-08-05T02:55:21.921640" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/p' contains text 'Describe a product, make announcements, or welcome customers to your store.'.</msg>
 <arg>${HomePage.lblDescriptionDetail}</arg>
 <arg>${HomePage['lblDescriptionDetail']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.576792" elapsed="0.005711"/>
+<status status="PASS" start="2025-08-05T02:55:21.915928" elapsed="0.005738"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblShopAll}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.582554" elapsed="0.006927"/>
+<status status="PASS" start="2025-08-05T02:55:21.921721" elapsed="0.006435"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:13:01.595407" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a' contains text 'Shop All'.</msg>
+<msg time="2025-08-05T02:55:21.934432" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a' contains text 'Shop All'.</msg>
 <arg>${HomePage.lblShopAll}</arg>
 <arg>${HomePage['lblShopAll']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.589539" elapsed="0.005895"/>
+<status status="PASS" start="2025-08-05T02:55:21.928210" elapsed="0.006249"/>
 </kw>
-<status status="PASS" start="2025-08-05T02:13:01.445742" elapsed="0.149728"/>
+<status status="PASS" start="2025-08-05T02:55:21.793439" elapsed="0.141055"/>
 </kw>
-<status status="PASS" start="2025-08-05T02:13:01.444932" elapsed="0.150560"/>
+<status status="PASS" start="2025-08-05T02:55:21.792082" elapsed="0.142434"/>
 </kw>
 <kw name="Click Shop All Button" owner="HomePage">
 <kw name="Click Shop All" owner="HomePage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-05T02:13:01.595888" level="INFO">Clicking element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a'.</msg>
+<msg time="2025-08-05T02:55:21.934905" level="INFO">Clicking element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a'.</msg>
 <arg>${HomePage.lblShopAll}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-05T02:13:01.595812" elapsed="4.950168"/>
+<status status="PASS" start="2025-08-05T02:55:21.934821" elapsed="2.642700"/>
 </kw>
-<status status="PASS" start="2025-08-05T02:13:01.595738" elapsed="4.950335"/>
+<status status="PASS" start="2025-08-05T02:55:21.934745" elapsed="2.642934"/>
 </kw>
-<status status="PASS" start="2025-08-05T02:13:01.595609" elapsed="4.950499"/>
+<status status="PASS" start="2025-08-05T02:55:21.934623" elapsed="2.643117"/>
+</kw>
+<kw name="Verify And Click Product" owner="ShopPage">
+<kw name="Verify Product" owner="ShopPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.lblProductTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:55:24.578462" elapsed="0.013152"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:55:24.600915" level="INFO">Element 'xpath://*[@id="content_inner"]/section/div/div/div[2]/div/div[3]/div/div[2]/div[1]/a' contains text 'Gift Card'.</msg>
+<arg>${ShopPage.lblProductTitle}</arg>
+<arg>${ShopPage['lblProductTitle']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:55:24.592091" elapsed="0.008878"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:55:24.578288" elapsed="0.022738"/>
+</kw>
+<kw name="Click Product" owner="ShopPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:55:24.601393" level="INFO">Clicking element 'xpath://*[@id="content_inner"]/section/div/div/div[2]/div/div[3]/div/div[2]/div[1]/a'.</msg>
+<arg>${ShopPage.lblProductTitle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-05T02:55:24.601283" elapsed="1.483469"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:55:24.601132" elapsed="1.483741"/>
+</kw>
+<kw name="Verify Product Detail" owner="ShopPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.lblProductDetail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:55:26.085174" elapsed="0.008745"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:55:26.102246" level="INFO">Element 'xpath://*[@id="content_inner"]/section[1]/div/div/div[2]/h1' contains text 'Gift Card'.</msg>
+<arg>${ShopPage.lblProductDetail}</arg>
+<arg>${ShopPage['lblProductDetail']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:55:26.094023" elapsed="0.008269"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.lblDenomination}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:55:26.102384" elapsed="0.008539"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:55:26.117723" level="INFO">Element 'xpath://*[@id="content_inner"]/section[1]/div/div/div[2]/div[2]/div/label' contains text 'Denomination'.</msg>
+<arg>${ShopPage.lblDenomination}</arg>
+<arg>${ShopPage['lblDenomination']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:55:26.111007" elapsed="0.006756"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.lblAddToCart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-05T02:55:26.117835" elapsed="0.007405"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:55:26.131596" level="INFO">Element 'xpath://*[@id="add-to-cart"]/div[2]/div/button' contains text 'Add to cart'.</msg>
+<arg>${ShopPage.lblAddToCart}</arg>
+<arg>${ShopPage['lblAddToCart']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-05T02:55:26.125308" elapsed="0.006323"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:55:26.085013" elapsed="0.046663"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:55:24.578003" elapsed="1.553697"/>
+</kw>
+<kw name="Click Add To Cart" owner="ShopPage">
+<kw name="Click Add Product" owner="ShopPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-05T02:55:26.132111" level="INFO">Clicking element 'xpath://*[@id="add-to-cart"]/div[2]/div/button'.</msg>
+<arg>${ShopPage.lblAddToCart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-05T02:55:26.132033" elapsed="2.129167"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:55:26.131947" elapsed="2.129327"/>
+</kw>
+<status status="PASS" start="2025-08-05T02:55:26.131820" elapsed="2.129483"/>
 </kw>
 <tag>1</tag>
-<status status="PASS" start="2025-08-05T02:12:56.057227" elapsed="10.489049"/>
+<status status="PASS" start="2025-08-05T02:55:17.364914" elapsed="10.896498"/>
 </test>
-<status status="PASS" start="2025-08-05T02:12:55.967648" elapsed="10.578967"/>
+<status status="PASS" start="2025-08-05T02:55:17.278401" elapsed="10.983272"/>
 </suite>
 <statistics>
 <total>
