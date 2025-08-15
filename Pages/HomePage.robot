@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ${CURDIR}/../../Resources/Translation/Store.yaml
+Variables    ${CURDIR}/../Resources/Translation/Store.yaml
 
 *** Variables ***
 ${HomePage.url}                              https://aptest.29next.store/

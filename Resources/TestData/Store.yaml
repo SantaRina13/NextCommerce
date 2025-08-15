@@ -1,0 +1,19 @@
+Contact:
+  ValidEmailAddress:              dev+uat13@29next.com
+  FirstName:                      Test
+  LastName:                       User
+CCPayment:
+  ValidCardNumber:                6011111111111117
+  CCFullName:                     Test User
+  CCExpirationDate:               08/30
+  CCCVV:                          123
+  InvalidCardNumber:              1234
+BillingAddress:
+  Country:                        United States
+  FirstAddress:                   3099
+  SecondAddress:                  Pleasant Hill Road
+  City:                           Mansfield
+  State:                          Tennessee
+  Zipcode:                        38236
+  PhoneNumber:                    15622387941
+  InvalidPhoneNumber:             1234

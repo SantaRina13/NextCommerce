@@ -11,3 +11,80 @@ ShopPage:
   lblProductDetail:                 Gift Card      
   lblDenomination:                  Denomination                                            
   lblAddToCart:                     Add to cart
+OrderDetail:
+  lblYourOrder:                     Your Order                       
+  lblEmptyCartTitle:                Your Cart is Empty!
+  lblEmptyCartDetail:               Oops! You have nothing here.
+  lblQuantity:                      Quantity
+  lblYourPrice:                     Your Price
+  lblCartSubtotal:                  Cart Subtotal             
+  lblShipping:                      Shipping 
+  lblCalculatedAtCheckout:          Calculated at checkout       
+  lblTotal:                         Total                  
+  lblProceedToCheckout:             Proceed to checkout
+CheckoutPage:
+#OrderSUmmary    
+  lblSubtotal:                      Subtotal     
+  lblShipping:                      Shipping      
+  lblOrderTotal:                    Order Total    
+  lblRefundTitle:                   30 Day Money-Back Guarantee      
+  lblRefundDetail:                  If you are unsatisfied for any reason within 90 days, simply contact our customer care center for a full refund of your initial order.       
+  lblConfidenceTitle:               Shop With Confidence      
+  lblConfidenceDetail:              Safe & Secure Guaranteed! You'll pay nothing if unauthorized charges are made to your credit card as a result of shopping!      
+  lblPrivacyTitle:                  Your Privacy Is Important     
+  lblPrivacyDetail:                 All information is encrypted and transmitted without risk using a Secure Socket Layer (SSL) protocol.
+#Contact
+  lblContactInformation:            Contact Information                                  
+  txtEmailAddress:                  Email Address    
+  txtFirstNameContact:              First name
+  txtLastNameContact:               Last name
+  lblEmailMe:                       Email me with news and offers  
+#CCPayment
+  lblPayment:                       Payment     
+  lblCreditCard:                    Credit Card     
+  txtCardNumber:                    Card Number     
+  txtFullName:                      Full Name
+  txtExpirationDate:                Expiration Date (MM / YY)      
+  txtCVV:                           CVV     
+  lblSaveCard:                      Save Card to My Account     
+#PaypalPayment
+  lblPayWithPaypal:                 Pay with PayPal       
+  lblDescription:                   After clicking "Complete order", you will be redirected to PayPal to complete your purchase securely.
+#BTPayment
+  lblBankTranser:                   Bank Transfer 
+  lblTestBT:                        Test     
+#CheckPayment
+  lblCheck:                         Check   
+  lblPayWithCheck:                  Pay with a check.     
+#BillingAddress
+  lblBillingAddressHeader:          Billing Address     
+  lblBillingAddress:                Billing address     
+  txtCountry:                       Country    
+  txtFirstNameBilling:              First name    
+  txtLastNameBilling:               Last name     
+  txtFirstAddress:                  First line of address     
+  txtSecondAddress:                 Second line of address        
+  txtCity:                          City      
+  txtState:                         State/Province  
+  txtZipcode:                       Post/Zip-code    
+  txtPhoneNumber:                   Phone number    
+#T&C
+  lblAgain:                         again       
+  lblTestTC:                        test   
+  lblCompleteOrder:                 Complete Order 
+#Errors
+  lblErrorInvalidCardNumber:        Card number is invalid
+  lblErrorEmptyCVV:                 Security code is required
+  lblErrorInvalidPhoneNumber:       This is not a valid local phone format for United States.
+SummaryPage:
+#OrderSummary
+  lblSubTotal:                      Subtotal               
+  lblShipping:                      Shipping             
+  lblOrderTotal:                    Order Total               
+#SummaryDetail
+  lblContactInfo:                   Contact Information             
+  lblPaymentMethod:                 Payment Method                
+  lblBillingAddress:                Billing Address              
+  lblInvoice:                       Invoice                       
+  lblViewInvoice:                   View Invoice
+  lblContinueShopping:              Continue Shopping                
