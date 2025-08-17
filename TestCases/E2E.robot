@@ -26,7 +26,7 @@ Successfully Buy
     CheckoutPage.Verify Order Summary
     CheckoutPage.Verify And Fill In Contact                 ${Contact['ValidEmailAddress']}        ${Contact['FirstName']}           ${Contact['LastName']}
     CheckoutPage.Verify And Fill In Valid Payment           ${CCPayment['ValidCardNumber']}        ${CCPayment['CCFullName']}        ${CCPayment['CCExpirationDate']}       ${CCPayment['CCCVV']}
-    CheckoutPage.Verify And Fill In Billing Address         ${BillingAddress['Country']}           ${Contact['FirstName']}           ${Contact['LastName']}                 ${BillingAddress['FirstAddress']}      ${BillingAddress['SecondAddress']}      ${BillingAddress['City']}      ${BillingAddress['State']}      ${BillingAddress['Zipcode']}      ${BillingAddress['PhoneNumber']}
+    CheckoutPage.Verify And Fill In Valid Billing Address   ${BillingAddress['Country']}           ${Contact['FirstName']}           ${Contact['LastName']}                 ${BillingAddress['FirstAddress']}      ${BillingAddress['SecondAddress']}      ${BillingAddress['City']}      ${BillingAddress['State']}      ${BillingAddress['Zipcode']}      ${BillingAddress['PhoneNumber']}
     CheckoutPage.Verify and Click Agreement
     SummaryPage.Verify Summary Page
     SummaryPage.Click Continue Shopping
@@ -60,7 +60,7 @@ Fail To Buy With Empty CVV
     OrderDetail.Click Proceed To Checkout
     CheckoutPage.Verify Order Summary
     CheckoutPage.Verify And Fill In Contact                     ${Contact['ValidEmailAddress']}        ${Contact['FirstName']}           ${Contact['LastName']}
-    CheckoutPage.Fill In Empty CVV                              ${CCPayment['InvalidCardNumber']}      ${CCPayment['CCFullName']}        ${CCPayment['CCExpirationDate']}
+    CheckoutPage.Fill In Empty CVV                              ${CCPayment['ValidCardNumber']}        ${CCPayment['CCFullName']}        ${CCPayment['CCExpirationDate']}
     CheckoutPage.Verify And Fill In Valid Billing Address       ${BillingAddress['Country']}           ${Contact['FirstName']}           ${Contact['LastName']}                 ${BillingAddress['FirstAddress']}      ${BillingAddress['SecondAddress']}      ${BillingAddress['City']}      ${BillingAddress['State']}      ${BillingAddress['Zipcode']}      ${BillingAddress['PhoneNumber']}
     CheckoutPage.Verify and Click Agreement
     CheckoutPage.Verify Error Empty CVV

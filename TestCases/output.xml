@@ -1,289 +1,897 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-15T18:13:17.223900" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-08-18T00:27:55.814630" rpa="false" schemaversion="5">
 <suite id="s1" name="E2E" source="/Users/abbon/Documents/Robot/NextCommerce/TestCases/E2E.robot">
-<test id="s1-t1" name="Fail To Buy With Empty CVV" line="51">
+<test id="s1-t1" name="Fail To Buy With Invalid Phone Number" line="68">
 <kw name="Open Home Page" owner="HomePage">
 <kw name="Open Page" owner="HomePage">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:17.331319" level="INFO">Opening browser 'chrome' to base url 'https://aptest.29next.store/'.</msg>
+<msg time="2025-08-18T00:27:55.917620" level="INFO">Opening browser 'chrome' to base url 'https://aptest.29next.store/'.</msg>
 <arg>${HomePage.url}</arg>
 <arg>${HomePage.browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-15T18:13:17.331207" elapsed="3.103073"/>
+<status status="PASS" start="2025-08-18T00:27:55.917511" elapsed="1.274563"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-15T18:13:23.442144" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-08-18T00:28:00.195274" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-15T18:13:20.438410" elapsed="3.009117"/>
+<status status="PASS" start="2025-08-18T00:27:57.193769" elapsed="3.001993"/>
 </kw>
-<status status="PASS" start="2025-08-15T18:13:17.330872" elapsed="6.117615"/>
+<status status="PASS" start="2025-08-18T00:27:55.917187" elapsed="4.279114"/>
 </kw>
-<status status="PASS" start="2025-08-15T18:13:17.330717" elapsed="6.117896"/>
+<status status="PASS" start="2025-08-18T00:27:55.917032" elapsed="4.279486"/>
 </kw>
 <kw name="Verify Home Page Detail" owner="HomePage">
 <kw name="Verify Home Page" owner="HomePage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblHeader}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.450570" elapsed="0.023792"/>
+<status status="PASS" start="2025-08-18T00:28:00.198752" elapsed="0.025780"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:23.490520" level="INFO">Element 'xpath:/html/body/div/div/div/div/div' contains text 'Welcome to our store'.</msg>
+<msg time="2025-08-18T00:28:00.239282" level="INFO">Element 'xpath:/html/body/div/div/div/div/div' contains text 'Welcome to our store'.</msg>
 <arg>${HomePage.lblHeader}</arg>
 <arg>${HomePage['lblHeader']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.474551" elapsed="0.016030"/>
+<status status="PASS" start="2025-08-18T00:28:00.224800" elapsed="0.014550"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.icnHome}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.490706" elapsed="0.008368"/>
+<status status="PASS" start="2025-08-18T00:28:00.239486" elapsed="0.009138"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblHome}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.499216" elapsed="0.009194"/>
+<status status="PASS" start="2025-08-18T00:28:00.248719" elapsed="0.008074"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:23.515231" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[1]/a' contains text 'Home'.</msg>
+<msg time="2025-08-18T00:28:00.263816" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[1]/a' contains text 'Home'.</msg>
 <arg>${HomePage.lblHome}</arg>
 <arg>${HomePage['lblHome']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.508506" elapsed="0.006761"/>
+<status status="PASS" start="2025-08-18T00:28:00.256877" elapsed="0.006973"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblShop}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.515361" elapsed="0.008068"/>
+<status status="PASS" start="2025-08-18T00:28:00.263924" elapsed="0.007178"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:23.530315" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[2]/a' contains text 'Shop'.</msg>
+<msg time="2025-08-18T00:28:00.277413" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[2]/a' contains text 'Shop'.</msg>
 <arg>${HomePage.lblShop}</arg>
 <arg>${HomePage['lblShop']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.523506" elapsed="0.006838"/>
+<status status="PASS" start="2025-08-18T00:28:00.271173" elapsed="0.006272"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblSupport}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.530409" elapsed="0.008011"/>
+<status status="PASS" start="2025-08-18T00:28:00.277518" elapsed="0.006579"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:23.545779" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[3]/a' contains text 'Support'.</msg>
+<msg time="2025-08-18T00:28:00.290027" level="INFO">Element 'xpath://*[@id="navbarMain"]/ul[1]/li[3]/a' contains text 'Support'.</msg>
 <arg>${HomePage.lblSupport}</arg>
 <arg>${HomePage['lblSupport']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.538494" elapsed="0.007315"/>
+<status status="PASS" start="2025-08-18T00:28:00.284164" elapsed="0.005892"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.icnMagnify}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.545872" elapsed="0.007559"/>
+<status status="PASS" start="2025-08-18T00:28:00.290128" elapsed="0.006545"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.icnProfile}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.553498" elapsed="0.007554"/>
+<status status="PASS" start="2025-08-18T00:28:00.296735" elapsed="0.006553"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.icnBasket}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.561118" elapsed="0.009102"/>
+<status status="PASS" start="2025-08-18T00:28:00.303349" elapsed="0.006465"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblDescriptionTitle}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.570312" elapsed="0.007577"/>
+<status status="PASS" start="2025-08-18T00:28:00.309874" elapsed="0.006445"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:23.584680" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/h1' contains text 'Store Value Proposition'.</msg>
+<msg time="2025-08-18T00:28:00.322446" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/h1' contains text 'Store Value Proposition'.</msg>
 <arg>${HomePage.lblDescriptionTitle}</arg>
 <arg>${HomePage['lblDescriptionTitle']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.577958" elapsed="0.006750"/>
+<status status="PASS" start="2025-08-18T00:28:00.316378" elapsed="0.006095"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblDescriptionDetail}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.584769" elapsed="0.007044"/>
+<status status="PASS" start="2025-08-18T00:28:00.322529" elapsed="0.006295"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:23.598504" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/p' contains text 'Describe a product, make announcements, or welcome customers to your store.'.</msg>
+<msg time="2025-08-18T00:28:00.334883" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/p' contains text 'Describe a product, make announcements, or welcome customers to your store.'.</msg>
 <arg>${HomePage.lblDescriptionDetail}</arg>
 <arg>${HomePage['lblDescriptionDetail']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.591893" elapsed="0.006641"/>
+<status status="PASS" start="2025-08-18T00:28:00.328882" elapsed="0.006026"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomePage.lblShopAll}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.598598" elapsed="0.007303"/>
+<status status="PASS" start="2025-08-18T00:28:00.334964" elapsed="0.006869"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:23.612773" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a' contains text 'Shop All'.</msg>
+<msg time="2025-08-18T00:28:00.348104" level="INFO">Element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a' contains text 'Shop All'.</msg>
 <arg>${HomePage.lblShopAll}</arg>
 <arg>${HomePage['lblShopAll']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.605982" elapsed="0.006825"/>
+<status status="PASS" start="2025-08-18T00:28:00.341894" elapsed="0.006237"/>
 </kw>
-<status status="PASS" start="2025-08-15T18:13:23.450336" elapsed="0.162509"/>
+<status status="PASS" start="2025-08-18T00:28:00.198374" elapsed="0.149794"/>
 </kw>
-<status status="PASS" start="2025-08-15T18:13:23.449731" elapsed="0.163137"/>
+<status status="PASS" start="2025-08-18T00:28:00.197524" elapsed="0.150666"/>
 </kw>
 <kw name="Click Shop All Button" owner="HomePage">
 <kw name="Click Shop All" owner="HomePage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:23.613291" level="INFO">Clicking element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a'.</msg>
+<msg time="2025-08-18T00:28:00.348604" level="INFO">Clicking element 'xpath:/html/body/section[1]/div[2]/div/div/div/div/a'.</msg>
 <arg>${HomePage.lblShopAll}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T18:13:23.613208" elapsed="2.523700"/>
+<status status="PASS" start="2025-08-18T00:28:00.348535" elapsed="2.607782"/>
 </kw>
-<status status="PASS" start="2025-08-15T18:13:23.613112" elapsed="2.523908"/>
+<status status="PASS" start="2025-08-18T00:28:00.348450" elapsed="2.608036"/>
 </kw>
-<status status="PASS" start="2025-08-15T18:13:23.612986" elapsed="2.524080"/>
+<status status="PASS" start="2025-08-18T00:28:00.348315" elapsed="2.608234"/>
 </kw>
 <kw name="Verify And Click Product" owner="ShopPage">
 <kw name="Verify Product" owner="ShopPage">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-15T18:13:31.139874" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-08-18T00:28:07.959251" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-15T18:13:26.137716" elapsed="5.002657"/>
+<status status="PASS" start="2025-08-18T00:28:02.957460" elapsed="5.002330"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:31.142432" level="INFO">Clicking element 'xpath:/html/body/div[4]/div/div[2]/div/div/div/div/div/button'.</msg>
+<msg time="2025-08-18T00:28:07.961787" level="INFO">Clicking element 'xpath:/html/body/div[4]/div/div[2]/div/div/div/div/div/button'.</msg>
 <arg>${ShopPage.icnCloseDiscount}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-15T18:13:31.141519" elapsed="0.067320"/>
+<status status="PASS" start="2025-08-18T00:28:07.960864" elapsed="0.064284"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ShopPage.lblProductTitle}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-15T18:13:31.208985" elapsed="0.008809"/>
+<status status="PASS" start="2025-08-18T00:28:08.025310" elapsed="0.013245"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:31.226325" level="INFO">Element 'xpath://*[@id="content_inner"]/section/div/div/div[2]/div/div[3]/div/div[2]/div[1]/a' contains text 'Gift Card'.</msg>
+<msg time="2025-08-18T00:28:08.045948" level="INFO">Element 'xpath://*[@id="content_inner"]/section/div/div/div[2]/div/div[3]/div/div[2]/div[1]/a' contains text 'Gift Card'.</msg>
 <arg>${ShopPage.lblProductTitle}</arg>
 <arg>${ShopPage['lblProductTitle']}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-08-15T18:13:31.217900" elapsed="0.008474"/>
+<status status="PASS" start="2025-08-18T00:28:08.038688" elapsed="0.007327"/>
 </kw>
-<status status="PASS" start="2025-08-15T18:13:26.137538" elapsed="5.088888"/>
+<status status="PASS" start="2025-08-18T00:28:02.957248" elapsed="5.088821"/>
 </kw>
 <kw name="Click Product" owner="ShopPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-15T18:13:31.226751" level="INFO">Clicking element 'xpath://*[@id="content_inner"]/section/div/div/div[2]/div/div[3]/div/div[2]/div[1]/a'.</msg>
-<msg time="2025-08-15T18:13:32.567149" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-201.png"&gt;&lt;img src="selenium-screenshot-201.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-08-15T18:13:32.567445" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/catalogue/gift-card_144/" title="..."&gt;Gift Card&lt;/a&gt; is not clickable at point (946, 488). Other element would receive the click: &lt;div role="dialog" aria-modal="true" aria-label="POPUP Form" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; z-index: 90000; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; justify-content: center; align-items: center; overflow: clip auto; background-color: rgba(20, 20, 20, 0.6); animation-timing-function: ease; animation-play-state: running; animation-iteration-count: 1; animation-fill-mode: forwards; animation-delay: 0s; animation-duration: 0.35s; animation-name: klaviyo-fadeout;"&gt;...&lt;/div&gt;
-  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-0   chromedriver                        0x0000000102ae8b38 cxxbridge1$str$ptr + 2722088
-1   chromedriver                        0x0000000102ae0aa8 cxxbridge1$str$ptr + 2689176
-2   chromedriver                        0x000000010263233c cxxbridge1$string$len + 90648
-3   chromedriver                        0x000000010267eff8 cxxbridge1$string$len + 405204
-4   chromedriver                        0x000000010267d564 cxxbridge1$string$len + 398400
-5   chromedriver                        0x000000010267b378 cxxbridge1$string$len + 389716
-6   chromedriver                        0x000000010267a774 cxxbridge1$string$len + 386640
-7   chromedriver                        0x000000010266f2a8 cxxbridge1$string$len + 340356
-8   chromedriver                        0x000000010266ed34 cxxbridge1$string$len + 338960
-9   chromedriver                        0x00000001026ba880 cxxbridge1$string$len + 649052
-10  chromedriver                        0x000000010266d784 cxxbridge1$string$len + 333408
-11  chromedriver                        0x0000000102aabeb4 cxxbridge1$str$ptr + 2473124
-12  chromedriver                        0x0000000102aaf120 cxxbridge1$str$ptr + 2486032
-13  chromedriver                        0x0000000102a8d6b4 cxxbridge1$str$ptr + 2348196
-14  chromedriver                        0x0000000102aaf9dc cxxbridge1$str$ptr + 2488268
-15  chromedriver                        0x0000000102a7e730 cxxbridge1$str$ptr + 2286880
-16  chromedriver                        0x0000000102acf5f8 cxxbridge1$str$ptr + 2618344
-17  chromedriver                        0x0000000102acf784 cxxbridge1$str$ptr + 2618740
-18  chromedriver                        0x0000000102ae06e4 cxxbridge1$str$ptr + 2688212
-19  libsystem_pthread.dylib             0x0000000188e7ac0c _pthread_start + 136
-20  libsystem_pthread.dylib             0x0000000188e75b80 thread_start + 8
-</msg>
+<msg time="2025-08-18T00:28:08.046425" level="INFO">Clicking element 'xpath://*[@id="content_inner"]/section/div/div/div[2]/div/div[3]/div/div[2]/div[1]/a'.</msg>
 <arg>${ShopPage.lblProductTitle}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-08-15T18:13:31.226658" elapsed="1.344301">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/catalogue/gift-card_144/" title="..."&gt;Gift Card&lt;/a&gt; is not clickable at point (946, 488). Other element would receive the click: &lt;div role="dialog" aria-modal="true" aria-label="POPUP Form" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; z-index: 90000; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; justify-content: center; align-items: center; overflow: clip auto; background-color: rgba(20, 20, 20, 0.6); animation-timing-function: ease; animation-play-state: running; animation-iteration-count: 1; animation-fill-mode: forwards; animation-delay: 0s; animation-duration: 0.35s; animation-name: klaviyo-fadeout;"&gt;...&lt;/div&gt;
-  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-0   chromedriver                        0x0000000102ae8b38 cxxbridge1$str$ptr + 2722088
-1   chromedriver                        0x0000000102ae0aa8 cxxbridge1$str$ptr + 2689176
-2   chromedriver                        0x000000010263233c cxxbridge1$string$len + 90648
-    [ Message content over the limit has been removed. ]
-...er                        0x000000010266d784 cxxbridge1$string$len + 333408
-11  chromedriver                        0x0000000102aabeb4 cxxbridge1$str$ptr + 2473124
-12  chromedriver                        0x0000000102aaf120 cxxbridge1$str$ptr + 2486032
-13  chromedriver                        0x0000000102a8d6b4 cxxbridge1$str$ptr + 2348196
-14  chromedriver                        0x0000000102aaf9dc cxxbridge1$str$ptr + 2488268
-15  chromedriver                        0x0000000102a7e730 cxxbridge1$str$ptr + 2286880
-16  chromedriver                        0x0000000102acf5f8 cxxbridge1$str$ptr + 2618344
-17  chromedriver                        0x0000000102acf784 cxxbridge1$str$ptr + 2618740
-18  chromedriver                        0x0000000102ae06e4 cxxbridge1$str$ptr + 2688212
-19  libsystem_pthread.dylib             0x0000000188e7ac0c _pthread_start + 136
-20  libsystem_pthread.dylib             0x0000000188e75b80 thread_start + 8</status>
+<status status="PASS" start="2025-08-18T00:28:08.046326" elapsed="1.800641"/>
 </kw>
-<status status="FAIL" start="2025-08-15T18:13:31.226523" elapsed="1.344607">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/catalogue/gift-card_144/" title="..."&gt;Gift Card&lt;/a&gt; is not clickable at point (946, 488). Other element would receive the click: &lt;div role="dialog" aria-modal="true" aria-label="POPUP Form" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; z-index: 90000; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; justify-content: center; align-items: center; overflow: clip auto; background-color: rgba(20, 20, 20, 0.6); animation-timing-function: ease; animation-play-state: running; animation-iteration-count: 1; animation-fill-mode: forwards; animation-delay: 0s; animation-duration: 0.35s; animation-name: klaviyo-fadeout;"&gt;...&lt;/div&gt;
-  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-0   chromedriver                        0x0000000102ae8b38 cxxbridge1$str$ptr + 2722088
-1   chromedriver                        0x0000000102ae0aa8 cxxbridge1$str$ptr + 2689176
-2   chromedriver                        0x000000010263233c cxxbridge1$string$len + 90648
-    [ Message content over the limit has been removed. ]
-...er                        0x000000010266d784 cxxbridge1$string$len + 333408
-11  chromedriver                        0x0000000102aabeb4 cxxbridge1$str$ptr + 2473124
-12  chromedriver                        0x0000000102aaf120 cxxbridge1$str$ptr + 2486032
-13  chromedriver                        0x0000000102a8d6b4 cxxbridge1$str$ptr + 2348196
-14  chromedriver                        0x0000000102aaf9dc cxxbridge1$str$ptr + 2488268
-15  chromedriver                        0x0000000102a7e730 cxxbridge1$str$ptr + 2286880
-16  chromedriver                        0x0000000102acf5f8 cxxbridge1$str$ptr + 2618344
-17  chromedriver                        0x0000000102acf784 cxxbridge1$str$ptr + 2618740
-18  chromedriver                        0x0000000102ae06e4 cxxbridge1$str$ptr + 2688212
-19  libsystem_pthread.dylib             0x0000000188e7ac0c _pthread_start + 136
-20  libsystem_pthread.dylib             0x0000000188e75b80 thread_start + 8</status>
+<status status="PASS" start="2025-08-18T00:28:08.046173" elapsed="1.800981"/>
 </kw>
 <kw name="Verify Product Detail" owner="ShopPage">
-<status status="NOT RUN" start="2025-08-15T18:13:32.571322" elapsed="0.000027"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.lblProductDetail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.847668" elapsed="0.010733"/>
 </kw>
-<status status="FAIL" start="2025-08-15T18:13:26.137291" elapsed="6.434114">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/catalogue/gift-card_144/" title="..."&gt;Gift Card&lt;/a&gt; is not clickable at point (946, 488). Other element would receive the click: &lt;div role="dialog" aria-modal="true" aria-label="POPUP Form" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; z-index: 90000; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; justify-content: center; align-items: center; overflow: clip auto; background-color: rgba(20, 20, 20, 0.6); animation-timing-function: ease; animation-play-state: running; animation-iteration-count: 1; animation-fill-mode: forwards; animation-delay: 0s; animation-duration: 0.35s; animation-name: klaviyo-fadeout;"&gt;...&lt;/div&gt;
-  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-0   chromedriver                        0x0000000102ae8b38 cxxbridge1$str$ptr + 2722088
-1   chromedriver                        0x0000000102ae0aa8 cxxbridge1$str$ptr + 2689176
-2   chromedriver                        0x000000010263233c cxxbridge1$string$len + 90648
-    [ Message content over the limit has been removed. ]
-...er                        0x000000010266d784 cxxbridge1$string$len + 333408
-11  chromedriver                        0x0000000102aabeb4 cxxbridge1$str$ptr + 2473124
-12  chromedriver                        0x0000000102aaf120 cxxbridge1$str$ptr + 2486032
-13  chromedriver                        0x0000000102a8d6b4 cxxbridge1$str$ptr + 2348196
-14  chromedriver                        0x0000000102aaf9dc cxxbridge1$str$ptr + 2488268
-15  chromedriver                        0x0000000102a7e730 cxxbridge1$str$ptr + 2286880
-16  chromedriver                        0x0000000102acf5f8 cxxbridge1$str$ptr + 2618344
-17  chromedriver                        0x0000000102acf784 cxxbridge1$str$ptr + 2618740
-18  chromedriver                        0x0000000102ae06e4 cxxbridge1$str$ptr + 2688212
-19  libsystem_pthread.dylib             0x0000000188e7ac0c _pthread_start + 136
-20  libsystem_pthread.dylib             0x0000000188e75b80 thread_start + 8</status>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:09.866928" level="INFO">Element 'xpath://*[@id="content_inner"]/section[1]/div/div/div[2]/h1' contains text 'Gift Card'.</msg>
+<arg>${ShopPage.lblProductDetail}</arg>
+<arg>${ShopPage['lblProductDetail']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.858522" elapsed="0.008454"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.lblDenomination}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.867069" elapsed="0.008056"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:09.882246" level="INFO">Element 'xpath://*[@id="content_inner"]/section[1]/div/div/div[2]/div[2]/div/label' contains text 'Denomination'.</msg>
+<arg>${ShopPage.lblDenomination}</arg>
+<arg>${ShopPage['lblDenomination']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.875210" elapsed="0.007071"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.btnDenominationAmout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.882352" elapsed="0.007120"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.btnQuantity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.889543" elapsed="0.006915"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.lblAddToCart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.896528" elapsed="0.006558"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:09.909441" level="INFO">Element 'xpath://*[@id="add-to-cart"]/div[2]/div/button' contains text 'Add to cart'.</msg>
+<arg>${ShopPage.lblAddToCart}</arg>
+<arg>${ShopPage['lblAddToCart']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.903149" elapsed="0.006321"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:09.847411" elapsed="0.062096"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:02.956888" elapsed="6.952642"/>
 </kw>
 <kw name="Click Add To Cart" owner="ShopPage">
-<status status="NOT RUN" start="2025-08-15T18:13:32.571530" elapsed="0.000015"/>
+<kw name="Click Add Product" owner="ShopPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ShopPage.lblAddToCart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.909881" elapsed="0.005129"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:09.915155" level="INFO">Clicking element 'xpath://*[@id="add-to-cart"]/div[2]/div/button'.</msg>
+<arg>${ShopPage.lblAddToCart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:09.915075" elapsed="1.741198"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:09.909797" elapsed="1.746575"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:09.909652" elapsed="1.746817"/>
 </kw>
 <kw name="Click Proceed To Checkout" owner="OrderDetail">
-<status status="NOT RUN" start="2025-08-15T18:13:32.571611" elapsed="0.000011"/>
+<kw name="Click Proceed" owner="OrderDetail">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-18T00:28:16.657578" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-18T00:28:11.657073" elapsed="5.001047"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${OrderDetail.lblProceedToCheckout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:16.658908" elapsed="0.024099"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:16.683608" level="INFO">Clicking element 'xpath://*[@id="cart-content"]/div[3]/a'.</msg>
+<arg>${OrderDetail.lblProceedToCheckout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:16.683293" elapsed="2.432316"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:11.656921" elapsed="7.458810"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:11.656690" elapsed="7.459080"/>
 </kw>
 <kw name="Verify Order Summary" owner="CheckoutPage">
-<status status="NOT RUN" start="2025-08-15T18:13:32.571681" elapsed="0.000012"/>
+<kw name="Verify Summary Detail" owner="CheckoutPage">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-08-18T00:28:24.116859" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-08-18T00:28:19.116505" elapsed="5.000844"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblCoupon}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.118117" elapsed="0.020888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.btnApply}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.139217" elapsed="0.011928"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblSubtotal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.151294" elapsed="0.009668"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.169133" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[1]/div[3]/table/tbody/tr[1]/td[1]' contains text 'Subtotal'.</msg>
+<arg>${CheckoutPage.lblSubtotal}</arg>
+<arg>${CheckoutPage['lblSubtotal']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.161077" elapsed="0.008098"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblShipping}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.169261" elapsed="0.007683"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.184818" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[1]/div[3]/table/tbody/tr[2]/td[1]' contains text 'Shipping'.</msg>
+<arg>${CheckoutPage.lblShipping}</arg>
+<arg>${CheckoutPage['lblShipping']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.177859" elapsed="0.006991"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblOrderTotal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.184924" elapsed="0.007047"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.198535" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[1]/div[3]/table/tfoot/tr/td[1]' contains text 'Order Total'.</msg>
+<arg>${CheckoutPage.lblOrderTotal}</arg>
+<arg>${CheckoutPage['lblOrderTotal']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.192046" elapsed="0.006520"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.imgRefund}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.198638" elapsed="0.006615"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblRefundTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.205318" elapsed="0.006834"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.218556" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[2]/ul/li[1]/p[1]' contains text '30 Day Money-Back Guarantee'.</msg>
+<arg>${CheckoutPage.lblRefundTitle}</arg>
+<arg>${CheckoutPage['lblRefundTitle']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.212221" elapsed="0.006363"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblRefundDetail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.218647" elapsed="0.006570"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.231548" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[2]/ul/li[1]/p[2]' contains text 'If you are unsatisfied for any reason within 90 days, simply contact our customer care center for a full refund of your initial order.'.</msg>
+<arg>${CheckoutPage.lblRefundDetail}</arg>
+<arg>${CheckoutPage['lblRefundDetail']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.225277" elapsed="0.006297"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.imgConfidence}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.231632" elapsed="0.006556"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblConfidenceTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.238247" elapsed="0.006638"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.251238" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[2]/ul/li[2]/p[1]' contains text 'Shop With Confidence'.</msg>
+<arg>${CheckoutPage.lblConfidenceTitle}</arg>
+<arg>${CheckoutPage['lblConfidenceTitle']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.244949" elapsed="0.006316"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblConfidenceDetail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.251332" elapsed="0.006547"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.264140" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[2]/ul/li[2]/p[2]' contains text 'Safe &amp; Secure Guaranteed! You'll pay nothing if unauthorized charges are made to your credit card as a result of shopping!'.</msg>
+<arg>${CheckoutPage.lblConfidenceDetail}</arg>
+<arg>${CheckoutPage['lblConfidenceDetail']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.257939" elapsed="0.006228"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.imgPrivacy}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.264224" elapsed="0.006606"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblPrivacyTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.270889" elapsed="0.006570"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.283821" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[2]/ul/li[3]/p[1]' contains text 'Your Privacy Is Important'.</msg>
+<arg>${CheckoutPage.lblPrivacyTitle}</arg>
+<arg>${CheckoutPage['lblPrivacyTitle']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.277518" elapsed="0.006329"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblPrivacyDetail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.283903" elapsed="0.006481"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.296656" level="INFO">Element 'xpath://*[@id="order_summary"]/div/div[2]/ul/li[3]/p[2]' contains text 'All information is encrypted and transmitted without risk using a Secure Socket Layer (SSL) protocol.'.</msg>
+<arg>${CheckoutPage.lblPrivacyDetail}</arg>
+<arg>${CheckoutPage['lblPrivacyDetail']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.290441" elapsed="0.006242"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:19.116337" elapsed="5.180381"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:19.115967" elapsed="5.180775"/>
 </kw>
 <kw name="Verify And Fill In Contact" owner="CheckoutPage">
+<kw name="Verify Contact Section" owner="CheckoutPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.imgLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.298415" elapsed="0.006923"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblContactInformation}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.305426" elapsed="0.007121"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.318905" level="INFO">Element 'xpath://*[@id="payment-detail-form"]/div[1]/div[1]/div/h2' contains text 'Contact Information'.</msg>
+<arg>${CheckoutPage.lblContactInformation}</arg>
+<arg>${CheckoutPage['lblContactInformation']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.312615" elapsed="0.006322"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.txtEmailAddress}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.318993" elapsed="0.006525"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.332179" level="INFO">Element 'xpath://*[@id="payment-detail-form"]/div[1]/div[2]/div[1]/div/label' contains text 'Email Address'.</msg>
+<arg>${CheckoutPage.txtEmailAddress}</arg>
+<arg>${CheckoutPage['txtEmailAddress']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.325618" elapsed="0.006592"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.txtFirstNameContact}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.332273" elapsed="0.006751"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.345341" level="INFO">Element 'xpath://*[@id="payment-detail-form"]/div[1]/div[2]/div[2]/div[1]/div/label' contains text 'First name'.</msg>
+<arg>${CheckoutPage.txtFirstNameContact}</arg>
+<arg>${CheckoutPage['txtFirstNameContact']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.339084" elapsed="0.006283"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.txtLastNameContact}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.345424" elapsed="0.006632"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.358439" level="INFO">Element 'xpath://*[@id="payment-detail-form"]/div[1]/div[2]/div[2]/div[2]/div/label' contains text 'Last name'.</msg>
+<arg>${CheckoutPage.txtLastNameContact}</arg>
+<arg>${CheckoutPage['txtLastNameContact']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.352115" elapsed="0.006351"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblEmailMe}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.358523" elapsed="0.006805"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.371732" level="INFO">Element 'xpath://*[@id="payment-detail-form"]/div[1]/div[2]/div[3]/div/label' contains text 'Email me with news and offers'.</msg>
+<arg>${CheckoutPage.lblEmailMe}</arg>
+<arg>${CheckoutPage['lblEmailMe']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.365387" elapsed="0.006371"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:24.298331" elapsed="0.073464"/>
+</kw>
+<kw name="Fill In Contact" owner="CheckoutPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.372089" level="INFO">Clicking element 'xpath://*[@id="id_customer-email"]'.</msg>
+<arg>${CheckoutPage.lblEmailAddress}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.372024" elapsed="0.028925"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.401147" level="INFO">Typing text 'dev+uat13@29next.com' into text field 'xpath://*[@id="id_customer-email"]'.</msg>
+<arg>${CheckoutPage.lblEmailAddress}</arg>
+<arg>${ValidEmailAddress}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.401037" elapsed="0.093685"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.494980" level="INFO">Clicking element 'xpath://*[@id="id_customer-first_name"]'.</msg>
+<arg>${CheckoutPage.lblFirstNameContact}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.494843" elapsed="0.048326"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.543416" level="INFO">Typing text 'Test' into text field 'xpath://*[@id="id_customer-first_name"]'.</msg>
+<arg>${CheckoutPage.lblFirstNameContact}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.543279" elapsed="0.027723"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.571234" level="INFO">Clicking element 'xpath://*[@id="id_customer-last_name"]'.</msg>
+<arg>${CheckoutPage.lblLastNameContact}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.571107" elapsed="0.042870"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.614297" level="INFO">Typing text 'User' into text field 'xpath://*[@id="id_customer-last_name"]'.</msg>
+<arg>${CheckoutPage.lblLastNameContact}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.614114" elapsed="0.022827"/>
+</kw>
+<arg>${ValidEmailAddress}</arg>
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<status status="PASS" start="2025-08-18T00:28:24.371879" elapsed="0.265117"/>
+</kw>
 <arg>${Contact['ValidEmailAddress']}</arg>
 <arg>${Contact['FirstName']}</arg>
 <arg>${Contact['LastName']}</arg>
-<status status="NOT RUN" start="2025-08-15T18:13:32.571821" elapsed="0.000025"/>
+<status status="PASS" start="2025-08-18T00:28:24.296857" elapsed="0.340168"/>
 </kw>
-<kw name="Fill In Empty CVV" owner="CheckoutPage">
-<arg>${CCPayment['InvalidCardNumber']}</arg>
+<kw name="Verify And Fill In Valid Payment" owner="CheckoutPage">
+<kw name="Verify Payment Section" owner="CheckoutPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblPayment}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.639374" elapsed="0.008783"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.654898" level="INFO">Element 'xpath://*[@id="payment-detail-form"]/div[2]/div[1]/div[1]/div/h2' contains text 'Payment'.</msg>
+<arg>${CheckoutPage.lblPayment}</arg>
+<arg>${CheckoutPage['lblPayment']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.648250" elapsed="0.006683"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblCreditCard}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.655003" elapsed="0.006987"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.669030" level="INFO">Element 'xpath://*[@id="accordionGroup"]/div[1]/div/div[1]/div/label' contains text 'Credit Card'.</msg>
+<arg>${CheckoutPage.lblCreditCard}</arg>
+<arg>${CheckoutPage['lblCreditCard']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.662085" elapsed="0.006980"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblCheck}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.669139" elapsed="0.267671"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.frameCardNumber}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.937441" elapsed="0.021166"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.959204" level="INFO">Selecting frame 'xpath://iframe[contains(@id,"spreedly-number-frame")]'.</msg>
+<arg>${CheckoutPage.frameCardNumber}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.958877" elapsed="0.016739"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.txtCardNumber}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.975776" elapsed="0.012922"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:24.996452" level="INFO">${placeholder} = Card Number</msg>
+<var>${placeholder}</var>
+<arg>${CheckoutPage.txtCardNumber}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.988808" elapsed="0.007668"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${placeholder}</arg>
+<arg>${CheckoutPage['txtCardNumber']}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.996577" elapsed="0.000944"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.997596" elapsed="0.000770"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.txtFullName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:24.998436" elapsed="0.008268"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.013940" level="INFO">Element 'xpath://*[@id="payOpt1"]/div[2]/div/label' contains text 'Full Name'.</msg>
+<arg>${CheckoutPage.txtFullName}</arg>
+<arg>${CheckoutPage['txtFullName']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.006781" elapsed="0.007193"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.txtExpirationDate}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.014044" elapsed="0.007274"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.027802" level="INFO">Element 'xpath://*[@id="payOpt1"]/div[3]/div[1]/div/label' contains text 'Expiration Date (MM / YY)'.</msg>
+<arg>${CheckoutPage.txtExpirationDate}</arg>
+<arg>${CheckoutPage['txtExpirationDate']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.021386" elapsed="0.006446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.frameCVV}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.027896" elapsed="0.006795"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.034833" level="INFO">Selecting frame 'xpath://iframe[contains(@id,"spreedly-cvv")]'.</msg>
+<arg>${CheckoutPage.frameCVV}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.034755" elapsed="0.008631"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.txtCVV}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.043450" elapsed="0.006974"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.055208" level="INFO">${placeholder} = CVV</msg>
+<var>${placeholder}</var>
+<arg>${CheckoutPage.txtCVV}</arg>
+<arg>placeholder</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.050492" elapsed="0.004732"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${placeholder}</arg>
+<arg>${CheckoutPage['txtCVV']}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.055286" elapsed="0.000623"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.055962" elapsed="0.000693"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblSaveCard}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.056705" elapsed="0.006940"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.070142" level="INFO">Element 'xpath://*[@id="payOpt1"]/div[4]/div/label' contains text 'Save Card to My Account'.</msg>
+<arg>${CheckoutPage.lblSaveCard}</arg>
+<arg>${CheckoutPage['lblSaveCard']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.063707" elapsed="0.006466"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:24.639280" elapsed="0.430928"/>
+</kw>
+<kw name="Fill In Valid Payment" owner="CheckoutPage">
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.070515" level="INFO">Selecting frame 'xpath://iframe[contains(@id,"spreedly-number-frame")]'.</msg>
+<arg>${CheckoutPage.frameCardNumber}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.070452" elapsed="0.009119"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.079713" level="INFO">Clicking element 'xpath://*[@id="card_number"]'.</msg>
+<arg>${CheckoutPage.fillCardNumber}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.079634" elapsed="0.043448"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.123331" level="INFO">Typing text '6011111111111117' into text field 'xpath://*[@id="card_number"]'.</msg>
+<arg>${CheckoutPage.fillCardNumber}</arg>
+<arg>${ValidCardNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.123186" elapsed="0.028826"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.152120" elapsed="0.000802"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.153101" level="INFO">Clicking element 'xpath://*[@id="id_name"]'.</msg>
+<arg>${CheckoutPage.lblFullName}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.152989" elapsed="0.028874"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.182096" level="INFO">Typing text 'Test User' into text field 'xpath://*[@id="id_name"]'.</msg>
+<arg>${CheckoutPage.lblFullName}</arg>
+<arg>${CCFullName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.181964" elapsed="0.024858"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.207046" level="INFO">Clicking element 'xpath://*[@id="payOpt1"]/div[3]/div[1]/div'.</msg>
+<arg>${CheckoutPage.lblExpirationDate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.206924" elapsed="0.029567"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.236730" level="INFO">Typing text '08/30' into text field 'xpath://*[@id="id_expiry"]'.</msg>
+<arg>${CheckoutPage.fillExpirationDate}</arg>
+<arg>${CCExpirationDate}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.236594" elapsed="0.027018"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.263871" level="INFO">Selecting frame 'xpath://iframe[contains(@id,"spreedly-cvv")]'.</msg>
+<arg>${CheckoutPage.frameCVV}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.263733" elapsed="0.009462"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.273389" level="INFO">Clicking element 'xpath://*[@id="cvv"]'.</msg>
+<arg>${CheckoutPage.fillCVV}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.273282" elapsed="0.038420"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.312043" level="INFO">Typing text '123' into text field 'xpath://*[@id="cvv"]'.</msg>
+<arg>${CheckoutPage.fillCVV}</arg>
+<arg>${CCCVV}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.311881" elapsed="0.019955"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.331941" elapsed="0.000633"/>
+</kw>
+<arg>${ValidCardNumber}</arg>
+<arg>${CCFullName}</arg>
+<arg>${CCExpirationDate}</arg>
+<arg>${CCCVV}</arg>
+<status status="PASS" start="2025-08-18T00:28:25.070298" elapsed="0.262315"/>
+</kw>
+<arg>${CCPayment['ValidCardNumber']}</arg>
 <arg>${CCPayment['CCFullName']}</arg>
 <arg>${CCPayment['CCExpirationDate']}</arg>
-<status status="NOT RUN" start="2025-08-15T18:13:32.571950" elapsed="0.000016"/>
+<arg>${CCPayment['CCCVV']}</arg>
+<status status="PASS" start="2025-08-18T00:28:24.637184" elapsed="0.695458"/>
 </kw>
-<kw name="Verify And Fill In Valid Billing Address" owner="CheckoutPage">
+<kw name="Fill In Invalid Phone Number" owner="CheckoutPage">
+<kw name="Fill In Invalid Phone" owner="CheckoutPage">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${CheckoutPage.txtPhoneNumber}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.339169" elapsed="0.280344"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.620770" level="INFO">Clicking element 'xpath://*[@id="id_country"]'.</msg>
+<arg>${CheckoutPage.lblCountry}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.620098" elapsed="0.081576"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.701954" level="INFO">Selecting options from selection list 'xpath://*[@id="id_country"]' by label United States.</msg>
+<arg>${CheckoutPage.lblCountry}</arg>
+<arg>${Country}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.701793" elapsed="0.058466"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.760513" level="INFO">Clicking element 'xpath://*[@id="id_first_name"]'.</msg>
+<arg>${CheckoutPage.lblFirstNameBilling}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.760379" elapsed="0.028215"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.788821" level="INFO">Typing text 'Test' into text field 'xpath://*[@id="id_first_name"]'.</msg>
+<arg>${CheckoutPage.lblFirstNameBilling}</arg>
+<arg>${FirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.788695" elapsed="0.022980"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.811946" level="INFO">Clicking element 'xpath://*[@id="id_last_name"]'.</msg>
+<arg>${CheckoutPage.lblLastNameBilling}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.811805" elapsed="0.028894"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.840939" level="INFO">Typing text 'User' into text field 'xpath://*[@id="id_last_name"]'.</msg>
+<arg>${CheckoutPage.lblLastNameBilling}</arg>
+<arg>${LastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.840803" elapsed="0.024173"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.865193" level="INFO">Clicking element 'xpath://*[@id="id_line1"]'.</msg>
+<arg>${CheckoutPage.lblFirstAddress}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.865077" elapsed="0.027561"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.892872" level="INFO">Typing text '3099' into text field 'xpath://*[@id="id_line1"]'.</msg>
+<arg>${CheckoutPage.lblFirstAddress}</arg>
+<arg>${FirstAddress}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.892737" elapsed="0.024093"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.917043" level="INFO">Clicking element 'xpath://*[@id="id_line2"]'.</msg>
+<arg>${CheckoutPage.lblSecondAddress}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.916927" elapsed="0.028153"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.945371" level="INFO">Typing text 'Pleasant Hill Road' into text field 'xpath://*[@id="id_line2"]'.</msg>
+<arg>${CheckoutPage.lblSecondAddress}</arg>
+<arg>${SecondAddress}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.945221" elapsed="0.027179"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:25.972633" level="INFO">Clicking element 'xpath://*[@id="id_line4"]'.</msg>
+<arg>${CheckoutPage.lblCity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:25.972510" elapsed="0.029936"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.002704" level="INFO">Typing text 'Mansfield' into text field 'xpath://*[@id="id_line4"]'.</msg>
+<arg>${CheckoutPage.lblCity}</arg>
+<arg>${City}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.002555" elapsed="0.025057"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.027822" level="INFO">Clicking element 'xpath://*[@id="billAdd2"]/div/div[5]/div[2]/div'.</msg>
+<arg>${CheckoutPage.lblState}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.027709" elapsed="0.038542"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.066504" level="INFO">Selecting options from selection list 'xpath://*[@id="id_state"]' by label Tennessee.</msg>
+<arg>${CheckoutPage.fillState}</arg>
+<arg>${State}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.066362" elapsed="0.035406"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.102013" level="INFO">Clicking element 'xpath://*[@id="billAdd2"]/div/div[5]/div[3]/div'.</msg>
+<arg>${CheckoutPage.lblZipcode}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.101876" elapsed="0.054108"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.156243" level="INFO">Typing text '38236' into text field 'xpath://*[@id="id_postcode"]'.</msg>
+<arg>${CheckoutPage.fillZipcode}</arg>
+<arg>${Zipcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.156098" elapsed="0.033622"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.189953" level="INFO">Clicking element 'xpath://*[@id="id_phone_number"]'.</msg>
+<arg>${CheckoutPage.lblPhoneNumber}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.189827" elapsed="0.029789"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.219867" level="INFO">Typing text '1234' into text field 'xpath://*[@id="id_phone_number"]'.</msg>
+<arg>${CheckoutPage.lblPhoneNumber}</arg>
+<arg>${InvalidPhoneNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.219731" elapsed="0.024455"/>
+</kw>
+<arg>${Country}</arg>
+<arg>${FirstName}</arg>
+<arg>${LastName}</arg>
+<arg>${FirstAddress}</arg>
+<arg>${SecondAddress}</arg>
+<arg>${City}</arg>
+<arg>${State}</arg>
+<arg>${Zipcode}</arg>
+<arg>${InvalidPhoneNumber}</arg>
+<status status="PASS" start="2025-08-18T00:28:25.338949" elapsed="0.905299"/>
+</kw>
 <arg>${BillingAddress['Country']}</arg>
 <arg>${Contact['FirstName']}</arg>
 <arg>${Contact['LastName']}</arg>
@@ -292,46 +900,100 @@ Stacktrace:
 <arg>${BillingAddress['City']}</arg>
 <arg>${BillingAddress['State']}</arg>
 <arg>${BillingAddress['Zipcode']}</arg>
-<arg>${BillingAddress['PhoneNumber']}</arg>
-<status status="NOT RUN" start="2025-08-15T18:13:32.572061" elapsed="0.000014"/>
+<arg>${BillingAddress['InvalidPhoneNumber']}</arg>
+<status status="PASS" start="2025-08-18T00:28:25.332776" elapsed="0.911548"/>
 </kw>
 <kw name="Verify and Click Agreement" owner="CheckoutPage">
-<status status="NOT RUN" start="2025-08-15T18:13:32.572149" elapsed="0.000013"/>
+<kw name="Verify And Click T&amp;C" owner="CheckoutPage">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblCompleteOrder}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.244730" elapsed="0.275692"/>
 </kw>
-<kw name="Verify Error Empty CVV" owner="CheckoutPage">
-<status status="NOT RUN" start="2025-08-15T18:13:32.572220" elapsed="0.000011"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblAgain}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.521014" elapsed="0.020682"/>
 </kw>
-<tag>3</tag>
-<status status="FAIL" start="2025-08-15T18:13:17.330410" elapsed="15.241947">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="/catalogue/gift-card_144/" title="..."&gt;Gift Card&lt;/a&gt; is not clickable at point (946, 488). Other element would receive the click: &lt;div role="dialog" aria-modal="true" aria-label="POPUP Form" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; z-index: 90000; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; justify-content: center; align-items: center; overflow: clip auto; background-color: rgba(20, 20, 20, 0.6); animation-timing-function: ease; animation-play-state: running; animation-iteration-count: 1; animation-fill-mode: forwards; animation-delay: 0s; animation-duration: 0.35s; animation-name: klaviyo-fadeout;"&gt;...&lt;/div&gt;
-  (Session info: chrome=138.0.7204.184); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-0   chromedriver                        0x0000000102ae8b38 cxxbridge1$str$ptr + 2722088
-1   chromedriver                        0x0000000102ae0aa8 cxxbridge1$str$ptr + 2689176
-2   chromedriver                        0x000000010263233c cxxbridge1$string$len + 90648
-    [ Message content over the limit has been removed. ]
-...er                        0x000000010266d784 cxxbridge1$string$len + 333408
-11  chromedriver                        0x0000000102aabeb4 cxxbridge1$str$ptr + 2473124
-12  chromedriver                        0x0000000102aaf120 cxxbridge1$str$ptr + 2486032
-13  chromedriver                        0x0000000102a8d6b4 cxxbridge1$str$ptr + 2348196
-14  chromedriver                        0x0000000102aaf9dc cxxbridge1$str$ptr + 2488268
-15  chromedriver                        0x0000000102a7e730 cxxbridge1$str$ptr + 2286880
-16  chromedriver                        0x0000000102acf5f8 cxxbridge1$str$ptr + 2618344
-17  chromedriver                        0x0000000102acf784 cxxbridge1$str$ptr + 2618740
-18  chromedriver                        0x0000000102ae06e4 cxxbridge1$str$ptr + 2688212
-19  libsystem_pthread.dylib             0x0000000188e7ac0c _pthread_start + 136
-20  libsystem_pthread.dylib             0x0000000188e75b80 thread_start + 8</status>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.557380" level="INFO">Element 'xpath://*[@id="payment-detail-form"]/div[2]/div[3]' contains text 'again'.</msg>
+<arg>${CheckoutPage.lblAgain}</arg>
+<arg>${CheckoutPage['lblAgain']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.541910" elapsed="0.015555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblTestTC}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.557598" elapsed="0.019143"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.584657" level="INFO">Element 'xpath://*[@id="payment-detail-form"]/div/div[3]/div[1]/div/div/div/div/div/div/div/label[1]/span' contains text 'test'.</msg>
+<arg>${CheckoutPage.lblTestTC}</arg>
+<arg>${CheckoutPage['lblTestTC']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.576836" elapsed="0.007861"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.584879" level="INFO">Clicking element 'xpath://*[@id="payment-detail-form"]/div/div[3]/div[1]/div/div/div/div/div/div/div/label[1]/span'.</msg>
+<arg>${CheckoutPage.lblTestTC}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.584780" elapsed="0.025087"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblCompleteOrder}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.609962" elapsed="0.005716"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.622218" level="INFO">Element 'xpath://*[@id="paymentBtn"]' contains text 'Complete Order'.</msg>
+<arg>${CheckoutPage.lblCompleteOrder}</arg>
+<arg>${CheckoutPage['lblCompleteOrder']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.615755" elapsed="0.006495"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:26.622398" level="INFO">Clicking element 'xpath://*[@id="paymentBtn"]'.</msg>
+<arg>${CheckoutPage.lblCompleteOrder}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.622315" elapsed="0.044273"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:26.244638" elapsed="0.422072"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:26.244477" elapsed="0.422346"/>
+</kw>
+<kw name="Verify Error Invalid Phone Number" owner="CheckoutPage">
+<kw name="Verify Error Invalid Phone" owner="CheckoutPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CheckoutPage.lblErrorInvalidPhoneNumber}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-18T00:28:26.667483" elapsed="2.327302"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-18T00:28:29.004235" level="INFO">Element 'xpath://*[@id="billAdd2"]/div/div[6]/span' contains text 'This is not a valid local phone format for United States.'.</msg>
+<arg>${CheckoutPage.lblErrorInvalidPhoneNumber}</arg>
+<arg>${CheckoutPage['lblErrorInvalidPhoneNumber']}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-18T00:28:28.994936" elapsed="0.009354"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:26.667371" elapsed="2.336979"/>
+</kw>
+<status status="PASS" start="2025-08-18T00:28:26.667153" elapsed="2.337230"/>
+</kw>
+<tag>4</tag>
+<status status="PASS" start="2025-08-18T00:27:55.916720" elapsed="33.087782"/>
 </test>
-<status status="FAIL" start="2025-08-15T18:13:17.224671" elapsed="15.348021"/>
+<status status="PASS" start="2025-08-18T00:27:55.815178" elapsed="33.189633"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">3</stat>
+<stat pass="1" fail="0" skip="0">4</stat>
 </tag>
 <suite>
-<stat name="E2E" id="s1" pass="0" fail="1" skip="0">E2E</stat>
+<stat name="E2E" id="s1" pass="1" fail="0" skip="0">E2E</stat>
 </suite>
 </statistics>
 <errors>

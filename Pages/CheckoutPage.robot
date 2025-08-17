@@ -33,16 +33,19 @@ ${CheckoutPage.lblEmailMe}                              xpath://*[@id="payment-d
 #CCPayment
 ${CheckoutPage.lblPayment}                              xpath://*[@id="payment-detail-form"]/div[2]/div[1]/div[1]/div/h2
 ${CheckoutPage.lblCreditCard}                           xpath://*[@id="accordionGroup"]/div[1]/div/div[1]/div/label
-${CheckoutPage.txtCardNumber}                           xpath://*[@id="number-form"]
-${CheckoutPage.lblCardNumber}                           xpath://*[@id="card_number"]
+${CheckoutPage.frameCardNumber}                         xpath://iframe[contains(@id,"spreedly-number-frame")]
+${CheckoutPage.txtCardNumber}                           xpath://*[@id="card_number"]
+${CheckoutPage.lblCardNumber}                           xpath://*[@id="payOpt1"]/div[1]
 ${CheckoutPage.fillCardNumber}                          xpath://*[@id="card_number"]
 ${CheckoutPage.txtFullName}                             xpath://*[@id="payOpt1"]/div[2]/div/label
 ${CheckoutPage.lblFullName}                             xpath://*[@id="id_name"]
 ${CheckoutPage.txtExpirationDate}                       xpath://*[@id="payOpt1"]/div[3]/div[1]/div/label
 ${CheckoutPage.lblExpirationDate}                       xpath://*[@id="payOpt1"]/div[3]/div[1]/div
 ${CheckoutPage.fillExpirationDate}                      xpath://*[@id="id_expiry"]
-${CheckoutPage.txtCVV}                                  xpath://*[@id="cvv_label"]
-${CheckoutPage.lblCVV}                                  xpath=//iframe[contains(@id, 'cvv')]
+${CheckoutPage.frameCVV}                                xpath://iframe[contains(@id,"spreedly-cvv")]
+${CheckoutPage.txtCVV}                                  xpath://*[@id="cvv"]
+${CheckoutPage.lblCVV}                                  xpath://*[@id="payOpt1"]/div[3]/div[2]
+${CheckoutPage.fillCVV}                                 xpath://*[@id="cvv"]
 ${CheckoutPage.lblSaveCard}                             xpath://*[@id="payOpt1"]/div[4]/div/label
 
 #PaypalPayment
@@ -147,29 +150,39 @@ Verify Payment Section
     SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.lblCreditCard}
     SeleniumLibrary.Element Should Contain                    ${CheckoutPage.lblCreditCard}                        ${CheckoutPage['lblCreditCard']}
     SeleniumLibrary.Scroll Element Into View                  ${CheckoutPage.lblCheck}
-    # SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.txtCardNumber}
-    # SeleniumLibrary.Element Should Contain                    ${CheckoutPage.txtCardNumber}                        ${CheckoutPage['txtCardNumber']}
+    SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.frameCardNumber}
+    SeleniumLibrary.Select frame                              ${CheckoutPage.frameCardNumber}
+    SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.txtCardNumber}
+    ${placeholder}=     Get Element Attribute                 ${CheckoutPage.txtCardNumber}                        placeholder
+    Should Be Equal                                           ${placeholder}                                       ${CheckoutPage['txtCardNumber']}
+    SeleniumLibrary.Unselect frame  
     SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.txtFullName}
     SeleniumLibrary.Element Should Contain                    ${CheckoutPage.txtFullName}                          ${CheckoutPage['txtFullName']}
     SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.txtExpirationDate}
     SeleniumLibrary.Element Should Contain                    ${CheckoutPage.txtExpirationDate}                    ${CheckoutPage['txtExpirationDate']}
-    # SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.txtCVV}
-    # SeleniumLibrary.Element Should Contain                    ${CheckoutPage.txtCVV}                            ${CheckoutPage['txtCVV']}
+    SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.frameCVV}
+    SeleniumLibrary.Select frame                              ${CheckoutPage.frameCVV}
+    SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.txtCVV}
+    ${placeholder}=     Get Element Attribute                 ${CheckoutPage.txtCVV}                               placeholder
+    Should Be Equal                                           ${placeholder}                                       ${CheckoutPage['txtCVV']}
+    SeleniumLibrary.Unselect frame
     SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.lblSaveCard}
-    SeleniumLibrary.Element Should Contain                    ${CheckoutPage.lblSaveCard}                           ${CheckoutPage['lblSaveCard']}
+    SeleniumLibrary.Element Should Contain                    ${CheckoutPage.lblSaveCard}                          ${CheckoutPage['lblSaveCard']}
 
 Fill In Valid Payment
     [Arguments]       ${ValidCardNumber}        ${CCFullName}           ${CCExpirationDate}         ${CCCVV}
-    # SeleniumLibrary.Click Element                             ${CheckoutPage.lblCardNumber}
-    # SeleniumLibrary.Input text                                ${CheckoutPage.fillCardNumber}                       ${ValidCardNumber}
-    sleep       10s
+    SeleniumLibrary.Select frame                              ${CheckoutPage.frameCardNumber}
+    SeleniumLibrary.Click Element                             ${CheckoutPage.fillCardNumber}
+    SeleniumLibrary.Input text                                ${CheckoutPage.fillCardNumber}                       ${ValidCardNumber}
+    SeleniumLibrary.Unselect frame
     SeleniumLibrary.Click Element                             ${CheckoutPage.lblFullName}
-    SeleniumLibrary.Input text                                ${CheckoutPage.lblFullName}                           ${CCFullName}
+    SeleniumLibrary.Input text                                ${CheckoutPage.lblFullName}                          ${CCFullName}
     SeleniumLibrary.Click Element                             ${CheckoutPage.lblExpirationDate}
-    SeleniumLibrary.Input text                                ${CheckoutPage.fillExpirationDate}                    ${CCExpirationDate}
-    sleep       10s
-    # SeleniumLibrary.Click Element                             ${CheckoutPage.lblCVV}
-    # SeleniumLibrary.Input text                                ${CheckoutPage.lblCVV}                                ${CCCVV}
+    SeleniumLibrary.Input text                                ${CheckoutPage.fillExpirationDate}                   ${CCExpirationDate}
+    SeleniumLibrary.Select frame                              ${CheckoutPage.frameCVV}
+    SeleniumLibrary.Click Element                             ${CheckoutPage.fillCVV}
+    SeleniumLibrary.Input text                                ${CheckoutPage.fillCVV}                              ${CCCVV}
+    SeleniumLibrary.Unselect frame
 
 Verify Billing Address Section
     SeleniumLibrary.Scroll Element Into View                  ${CheckoutPage.txtPhoneNumber}
@@ -230,27 +243,29 @@ Verify And Click T&C
 
 Fill In Invalid Card
     [Arguments]       ${InvalidCardNumber}        ${CCFullName}           ${CCExpirationDate}       ${CCCVV}   
-    # Execute JavaScript                                        document.getElementById("card_number").classList.remove("visuallyhidden")
-    SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.lblCardNumber}
-    SeleniumLibrary.Click Element                             ${CheckoutPage.lblCardNumber}
-    # SeleniumLibrary.Input text                                ${CheckoutPage.fillCardNumber}                       ${InvalidCardNumber}
+    SeleniumLibrary.Select frame                              ${CheckoutPage.frameCardNumber}
+    SeleniumLibrary.Click Element                             ${CheckoutPage.fillCardNumber}
+    SeleniumLibrary.Input text                                ${CheckoutPage.fillCardNumber}                        ${InvalidCardNumber}
+    SeleniumLibrary.Unselect frame
     SeleniumLibrary.Click Element                             ${CheckoutPage.lblFullName}
     SeleniumLibrary.Input text                                ${CheckoutPage.lblFullName}                           ${CCFullName}
     SeleniumLibrary.Click Element                             ${CheckoutPage.lblExpirationDate}
     SeleniumLibrary.Input text                                ${CheckoutPage.fillExpirationDate}                    ${CCExpirationDate}
-    # SeleniumLibrary.Click Element                             ${CheckoutPage.lblCVV}
-    # SeleniumLibrary.Input text                                ${CheckoutPage.lblCVV}                                ${CCCVV}
+    SeleniumLibrary.Select frame                              ${CheckoutPage.frameCVV}
+    SeleniumLibrary.Click Element                             ${CheckoutPage.fillCVV}
+    SeleniumLibrary.Input text                                ${CheckoutPage.fillCVV}                               ${CCCVV}
+    SeleniumLibrary.Unselect frame                            
 
 Verify Error Invalid Card
     SeleniumLibrary.Wait Until Element Is visible              ${CheckoutPage.lblErrorInvalidCardNumber}
     SeleniumLibrary.Element Should Contain                     ${CheckoutPage.lblErrorInvalidCardNumber}            ${CheckoutPage['lblErrorInvalidCardNumber']}
 
 Fill In Without CVV
-    [Arguments]       ${InvalidCardNumber}        ${CCFullName}           ${CCExpirationDate} 
-    # Execute JavaScript                                        document.getElementById("card_number").classList.remove("visuallyhidden")
-    SeleniumLibrary.Wait Until Element Is visible             ${CheckoutPage.lblCardNumber}
-    # SeleniumLibrary.Click Element                             ${CheckoutPage.lblCardNumber}
-    # SeleniumLibrary.Input text                                ${CheckoutPage.fillCardNumber}                       ${InvalidCardNumber}
+    [Arguments]       ${ValidCardNumber}        ${CCFullName}           ${CCExpirationDate} 
+    SeleniumLibrary.Select frame                              ${CheckoutPage.frameCardNumber}
+    SeleniumLibrary.Click Element                             ${CheckoutPage.fillCardNumber}
+    SeleniumLibrary.Input text                                ${CheckoutPage.fillCardNumber}                        ${ValidCardNumber}
+    SeleniumLibrary.Unselect frame
     SeleniumLibrary.Click Element                             ${CheckoutPage.lblFullName}
     SeleniumLibrary.Input text                                ${CheckoutPage.lblFullName}                           ${CCFullName}
     SeleniumLibrary.Click Element                             ${CheckoutPage.lblExpirationDate}
