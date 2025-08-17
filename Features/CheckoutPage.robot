@@ -31,7 +31,7 @@ Verify Error Invalid Card Number
     CheckoutPage.Verify Error Invalid Card
 
 Fill In Empty CVV
-    [Arguments]         ${InvalidCardNumber}      ${CCFullName}           ${CCExpirationDate}       
+    [Arguments]         ${ValidCardNumber}        ${CCFullName}           ${CCExpirationDate}       
     CheckoutPage.Fill In Without CVV              ${InvalidCardNumber}             ${CCFullName}           ${CCExpirationDate}
 
 Verify Error Empty CVV
